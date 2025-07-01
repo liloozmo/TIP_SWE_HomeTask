@@ -46,7 +46,7 @@ TIP_SWE_HomeTask/
 │   └── requirements.txt
 │
 ├── requirements.txt         
-├── .env                      
+├── .env.example                      
 ├── README.md 
 ```
               
