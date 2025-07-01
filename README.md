@@ -52,7 +52,7 @@ TIP_SWE_HomeTask/
               
 ### How to Run
 
-### Step 1: Activate virtual environment and Install dependencies
+### Step 1: Activate virtual environment, Install dependencies and set up environment varaibles.
 
 ```bash
 # Run from project root (TIP_SWE_HomeTask)
@@ -65,6 +65,22 @@ Requirements.txt in the root level covers all the dependencies, but to be on the
 ```bash
 pip install -r publisher_service/requirements.txt
 ```
+
+Create a .env file in the root directory  with the variables from your .env.example:
+
+```bash
+VIRUSTOTAL_API_KEY=your_virustotal_api_key_here
+SUBSCRIPTION_NAME=projects/your-project-id/subscriptions/your-subscription-name
+SERVICE_ACCOUNT=./path_to_your_service_account.json
+```
+#### How to get the values:
+VIRUSTOTAL_API_KEY: Sign up at [VirusTotal](https://docs.virustotal.com/docs/please-give-me-an-api-key) to obtain your API key.
+
+SUBSCRIPTION_NAME: Your Google Cloud Pub/Sub subscription name, usually in the format
+projects/{project-id}/subscriptions/{subscription-name}.
+
+SERVICE_ACCOUNT: Path to your Google Cloud service account JSON key file with Pub/Sub permissions.
+
 
 ### Step 2: Run the Application
 
